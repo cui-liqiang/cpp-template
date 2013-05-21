@@ -5,13 +5,6 @@
 #include "CompositeAction.h"
 
 int main() {
-	Action1 action1;
-	Action2 action2;
-	Action3 action3;
-	CompositeAction composite;
-	composite.addAction(&action1);
-	composite.addAction(&action2);
-	composite.addAction(&action3);
-
-	composite.exec();
+	GenericCompositeAction<Action1, Action2> action;
+	action.exec();
 }
